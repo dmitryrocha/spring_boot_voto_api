@@ -16,6 +16,8 @@ public class PautaForm {
     @NotNull @NotEmpty @Length(min = 10)
     private String descricao;
 
+    private StatusVotacao statusVotacao;
+
 
     public Pauta converter() {
         Pauta pauta = new Pauta();

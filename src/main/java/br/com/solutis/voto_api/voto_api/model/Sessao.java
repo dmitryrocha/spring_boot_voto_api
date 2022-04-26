@@ -13,7 +13,7 @@ public class Sessao {
     private Pauta pauta;
     @OneToMany(mappedBy = "sessao", cascade = CascadeType.ALL)
     private List<Voto> votos;
-    private LocalDateTime inicioDaSessao;
+    private LocalDateTime inicioDaSessao = LocalDateTime.now();
     private LocalDateTime fimDaSessao;
 
     public Long getId() {

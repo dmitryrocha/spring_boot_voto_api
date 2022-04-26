@@ -22,7 +22,9 @@ public class SessaoDto {
         this.inicioDaSessao = sessao.getInicioDaSessao();
         this.fimDaSessao = sessao.getFimDaSessao();
 
-        this.votos.addAll(sessao.getVotos().stream().map(VotoDto::new).collect(Collectors.toList()));
+        if(sessao.getVotos() != null) {
+            this.votos.addAll(sessao.getVotos().stream().map(VotoDto::new).collect(Collectors.toList()));
+        }
     }
 
     public static List<SessaoDto> converter(List<Sessao> sessoes) {
