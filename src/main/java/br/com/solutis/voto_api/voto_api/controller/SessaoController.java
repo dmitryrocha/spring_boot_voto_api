@@ -6,7 +6,6 @@ import br.com.solutis.voto_api.voto_api.model.Sessao;
 import br.com.solutis.voto_api.voto_api.model.SessaoForm;
 import br.com.solutis.voto_api.voto_api.repository.PautaRepository;
 import br.com.solutis.voto_api.voto_api.repository.SessaoRepository;
-import br.com.solutis.voto_api.voto_api.service.ResultadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

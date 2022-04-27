@@ -10,15 +10,15 @@ import java.util.stream.Collectors;
 public class VotoDto {
 
     private Long id;
-    private Long id_associado;
-    private Long id_sessao;
+    private Long idAssociado;
+    private Long idSessao;
     private LocalDateTime horaDoVoto;
     private ValorVoto valorVoto;
 
     public VotoDto(Voto voto) {
         this.id = voto.getId();
-        this.id_associado = voto.getAssociado().getId();
-        this.id_sessao = voto.getSessao().getId();
+        this.idAssociado = voto.getAssociado().getId();
+        this.idSessao = voto.getSessao().getId();
         this.horaDoVoto = voto.getHoraDoVoto();
         this.valorVoto = voto.getValorVoto();
     }
@@ -31,12 +31,12 @@ public class VotoDto {
         return id;
     }
 
-    public Long getId_associado() {
-        return id_associado;
+    public Long getIdAssociado() {
+        return idAssociado;
     }
 
-    public Long getId_sessao() {
-        return id_sessao;
+    public Long getIdSessao() {
+        return idSessao;
     }
 
     public LocalDateTime getHoraDoVoto() {

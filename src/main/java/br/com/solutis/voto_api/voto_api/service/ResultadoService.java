@@ -9,8 +9,11 @@ import java.util.List;
 
 public class ResultadoService {
 
+    private ResultadoService() {}
+
     public static Resultado calcular(Sessao sessao) {
-        double sim=0, nao=0;
+        double sim=0;
+        double nao=0;
         Resultado resultado = new Resultado();
         List<Voto> votos = sessao.getVotos();
         for (Voto voto : votos) {
@@ -33,16 +36,6 @@ public class ResultadoService {
             resultado.setVencedor("EMPATE");
         }
 
-//        votos.stream().map(t -> {
-//            if(t.getValorVoto() == ValorVoto.SIM){
-//                count.set(resultado.getQtdSim() + 1);
-//                resultado.setQtdSim(count.get());
-//            } else {
-//                count.set(resultado.getQtdNao() + 1);
-//                resultado.setQtdNao(count.get());
-//            }
-//            return null;
-//        }).collect(Collectors.toList());
         return resultado;
     }
 }

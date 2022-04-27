@@ -1,13 +1,9 @@
 package br.com.solutis.voto_api.voto_api.model;
 
-import br.com.solutis.voto_api.voto_api.controller.dto.PautaDto;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class PautaForm {
 
@@ -15,9 +11,6 @@ public class PautaForm {
     private String titulo;
     @NotNull @NotEmpty @Length(min = 10)
     private String descricao;
-
-    private StatusVotacao statusVotacao;
-
 
     public Pauta converter() {
         Pauta pauta = new Pauta();

@@ -8,16 +8,15 @@ import java.util.Optional;
 
 public class PautaService {
 
-    public static void finalizarVotacao(Long pauta_id, PautaRepository pautaRepository) {
+    public static void finalizarVotacao(Long pautaId, PautaRepository pautaRepository) {
 
-        Pauta pauta = pautaRepository.getById(pauta_id);
-        System.out.println(pauta.getTitulo());
+        Pauta pauta = pautaRepository.getById(pautaId);
         pauta.setStatusVotacao(StatusVotacao.FECHADA);
         pautaRepository.save(pauta);
     }
 
-    public Pauta atualizarStatus(PautaRepository pautaRepository, Long pauta_id) {
-        Optional<Pauta> optional = pautaRepository.findById(pauta_id);
+    public Pauta atualizarStatus(PautaRepository pautaRepository, Long pautaId) {
+        Optional<Pauta> optional = pautaRepository.findById(pautaId);
         Pauta pauta = null;
         if(optional.isPresent()) {
             pauta = optional.get();

@@ -3,12 +3,6 @@ package br.com.solutis.voto_api.voto_api.service;
 import br.com.solutis.voto_api.voto_api.model.Sessao;
 import br.com.solutis.voto_api.voto_api.repository.PautaRepository;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 
 public class FechaVotacaoService {
 

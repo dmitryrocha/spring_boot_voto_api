@@ -40,12 +40,12 @@ public class VotoForm {
     }
 
     public Voto converter(AssociadoRepository associadoRepository, SessaoRepository sessaoRepository) {
-        Associado associado = associadoRepository.getById(this.associado);
-        Sessao sessao = sessaoRepository.getById(this.sessao);
-        List<Voto> votos = sessao.getVotos();
-        List<Voto> duplicado = votos.stream().filter(p -> p.getAssociado() == associado).collect(Collectors.toList());
+        Associado associadoBD = associadoRepository.getById(this.associado);
+        Sessao sessaoBD = sessaoRepository.getById(this.sessao);
+        List<Voto> votos = sessaoBD.getVotos();
+        List<Voto> duplicado = votos.stream().filter(p -> p.getAssociado() == associadoBD).collect(Collectors.toList());
         if(duplicado.isEmpty()) {
-            return new Voto(associado, sessao, LocalDateTime.now(), this.valorVoto);
+            return new Voto(associadoBD, sessaoBD, LocalDateTime.now(), this.valorVoto);
         } else {
             return null;
         }
