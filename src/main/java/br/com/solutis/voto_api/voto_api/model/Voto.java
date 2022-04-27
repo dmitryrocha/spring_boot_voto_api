@@ -16,6 +16,15 @@ public class Voto {
     @Enumerated(EnumType.STRING)
     private ValorVoto valorVoto;
 
+    public Voto () {}
+
+    public Voto(Associado associado, Sessao sessao, LocalDateTime horaDoVoto, ValorVoto valorVoto) {
+        this.associado = associado;
+        this.sessao = sessao;
+        this.horaDoVoto = horaDoVoto;
+        this.valorVoto = valorVoto;
+    }
+
     public Long getId() {
         return id;
     }
