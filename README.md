@@ -33,3 +33,8 @@ $ mvn clean install
  ```sh
 mvn spring-boot:run
 ```
+
+Após a execução a inicialização conseguirá acessar:
+
+- [Raiz da API](https://localhost:8080)
+- [Documentação no Swagger](http://localhost:8080/swagger-ui.html)
