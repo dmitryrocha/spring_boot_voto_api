@@ -38,3 +38,4 @@ Após a execução a inicialização conseguirá acessar:
 
 - [Raiz da API](https://localhost:8080)
 - [Documentação no Swagger](http://localhost:8080/swagger-ui.html)
+- [Coleção no Postman](https://github.com/dmitryrocha/spring_boot_voto_api/blob/master/Vote_API.postman_collection.json)
